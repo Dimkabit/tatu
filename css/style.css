@@ -925,7 +925,18 @@ body.ie .ibg img {
   text-transform: uppercase;
 }
 
-.header__logo .line::before {
+.header__logo h2 {
+  text-align: center;
+  margin-top: 3px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #BB8C5F;
+}
+
+.line::before {
   margin-top: -2.6px;
   left: -1px;
   position: relative;
@@ -937,17 +948,15 @@ body.ie .ibg img {
           clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.header__logo .line {
+.line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0px 10px 0px 0px;
   border-top: 1px solid #BB8C5F;
-  height: 1px;
-  width: 100%;
 }
 
-.header__logo .line::after {
+.line::after {
   margin-top: -2.6px;
   position: relative;
   left: 102%;
@@ -957,17 +966,6 @@ body.ie .ibg img {
   background-color: #BB8C5F;
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
           clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.header__logo h2 {
-  text-align: center;
-  margin-top: 3px;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 150%;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: #BB8C5F;
 }
 
 .header__right {
@@ -1283,8 +1281,6 @@ body.ie .ibg img {
 .main {
   height: 43.75rem;
   background: #030201 url("../img/bg.png") no-repeat center;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .main__container {
@@ -1357,7 +1353,7 @@ body.ie .ibg img {
 .main-button span::before, .main-button span::after {
   content: '';
   position: absolute;
-  right: 0px;
+  right: 2px;
   top: 24px;
   border: 10px solid transparent;
   border-right: 10px solid #BB8C5F;
@@ -1365,7 +1361,7 @@ body.ie .ibg img {
 
 .main-button span::after {
   border-right: 10px solid #524336;
-  right: -3px;
+  right: -1px;
 }
 
 .main-button a {
@@ -1401,8 +1397,337 @@ body.ie .ibg img {
 .big {
   width: 64px;
   height: 64px;
+  border: 1.5px solid #BB8C5F;
 }
 
 .big:first-child {
   margin-bottom: 20px;
+}
+
+.big-first, .big-last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.big-first::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  content: '';
+  width: 1px;
+  height: 36px;
+  background-color: #BB8C5F;
+  margin-top: -23px;
+}
+
+.big-first::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  content: '';
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-color: #BB8C5F;
+  margin-top: -23px;
+}
+
+.big-last::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 64px;
+  background-color: #BB8C5F;
+  margin-top: 36px;
+}
+
+.big-last::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 6px;
+  height: 6px;
+  content: '';
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-color: #BB8C5F;
+  margin-top: 98px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    height: 43.75rem;
+    background: #030201 url("../img/bg1.png") no-repeat center;
+    background-position: right;
+  }
+  .main__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .big {
+    display: none;
+  }
+  .main__button-group {
+    margin-top: 70px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .group-button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .main {
+    height: 100vh;
+    background: #030201 url("../img/bgtel.png") no-repeat;
+    background-position-x: center;
+  }
+  .main__section {
+    padding-top: 331px;
+  }
+  .main__section h1 {
+    font-size: 35px;
+  }
+  .main-info {
+    font-size: 20px;
+  }
+  .main-button {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+  .main__button-group {
+    display: none;
+  }
+}
+
+.section__card {
+  padding-top: 120px;
+  background: #F5F5F5;
+}
+
+.section__card-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.list__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list-text {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 115%;
+  color: #3E424B;
+  white-space: nowrap;
+}
+
+.active-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #BB8C5F;
+  border-bottom: 2px solid #BB8C5F;
+}
+
+.active-text::after {
+  content: '';
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-color: #BB8C5F;
+  margin-top: 33px;
+  right: -1px;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+}
+
+.active-text::before {
+  content: '';
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-color: #BB8C5F;
+  margin-top: 33px;
+  left: -1px;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+}
+
+.card__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 37px 5px 10px 5px;
+  background: #F5F5F5;
+  max-width: 289px;
+  height: 430px;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.head__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 30px 0px 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.head__card span {
+  position: relative;
+  color: #BB8C5F;
+  border: 1px solid #BB8C5F;
+  padding: 4px 18px 6px 10px;
+  font-size: 15px;
+  line-height: 130%;
+}
+
+.head__card span::before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border: 15px solid transparent;
+  border-right: 15px solid #BB8C5F;
+}
+
+.head__card span::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 0px;
+  border: 15px solid transparent;
+  border-right: 15px solid #f5f5f5;
+}
+
+.pogination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pogination-block {
+  width: 6px;
+  height: 6px;
+  background: #E3E3E3;
+  margin-right: 8px;
+}
+
+.pagination-active {
+  background: #524336;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 6px 30px 0px 30px;
+  font-size: 17px;
+  line-height: 140%;
+  color: #3E424B;
+}
+
+.cost {
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 130%;
+  color: #BB8C5F;
+}
+
+.button-card {
+  margin: 0px 0px 0px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 259px;
+  height: 50px;
+  background: #eeeeee;
+}
+
+.button-card a {
+  color: #BB8C5F;
+}
+
+.button-card.main-button::after, .button-card.main-button::before {
+  margin-top: -6px;
+}
+
+.button-card.main-button span::after,
+.button-card.main-button span::before {
+  margin-top: -6px;
+}
+
+.button-card.main-button::after {
+  border-left: 10px solid #eeeeee;
+}
+
+.button-card.main-button span::after {
+  border-right: 10px solid #eeeeee;
+}
+
+.button-card.main-button {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card:hover {
+  height: 500px;
+}
+
+.card:hover .button-card.main-button {
+  visibility: visible;
+  opacity: 1;
 }
