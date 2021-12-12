@@ -1468,7 +1468,7 @@ body.ie .ibg img {
 @media (max-width: 768px) {
   .main {
     height: 43.75rem;
-    background: #030201 url("../img/bg1.png") no-repeat center;
+    background: #030201 url("../img/Bg1.png") no-repeat center;
     background-position: right;
   }
   .main__container {
@@ -1500,7 +1500,7 @@ body.ie .ibg img {
 @media (max-width: 400px) {
   .main {
     height: 100vh;
-    background: #030201 url("../img/bgtel.png") no-repeat;
+    background: #030201 url("../img/Bgtel.png") no-repeat;
     background-position-x: center;
   }
   .main__section {
