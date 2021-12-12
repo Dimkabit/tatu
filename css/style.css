@@ -1499,7 +1499,6 @@ body.ie .ibg img {
 
 @media (max-width: 400px) {
   .main {
-    height: 100vh;
     background: #030201 url("../img/bgtel.png") no-repeat;
     background-position-x: center;
   }
